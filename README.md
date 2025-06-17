@@ -7,11 +7,11 @@ git clone https://github.com/ronitkunk/markovleafrag.git
 ```sh
 pip install -r requirements.txt
 ```
-* Create a text file containing the score for the piece you want to train the Markov chain on, as a sequence with space-separated chords. Chords are comma-separated unordered sets of integer frequencies.
+* Create a text file containing the score for the piece you want to train the Markov chain on, as a sequence with space-separated chords. Chords are comma-separated ordered sets of integer frequencies.
 ```
 77,155 103,207 415 155,207,261,311,622 415
 ```
-* * there are sample files provdided like `joplin/mapleleafrag.txt` and `vivaldi/fourseasonsspring.txt`.
+* * there are sample files provided like `joplin/mapleleafrag.txt` and `vivaldi/fourseasonsspring.txt`.
 * Run `markov_composer.py` and follow the instructions in the terminal.
 ```python
 python markov_composer.py
