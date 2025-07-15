@@ -29,19 +29,14 @@ pip install -r requirements.txt
 77,155 103,207 415 155,207,261,311,622 415
 ```
 * * there are sample files provided like `joplin/mapleleafrag.txt` and `vivaldi/fourseasonsspring.txt`.
-* Run `markov_composer.py` and follow the instructions in the terminal.
+* Run `markov_composer.py` with the correct command line arguments.
 ```python
-python markov_composer.py
+python markov_composer.py [--input_path INPUT_PATH] [--look_back LOOK_BACK] [--play] [--output_path OUTPUT_PATH] [--composition_length COMPOSITION_LENGTH]
 ```
-For example, while training a Markov chain on the Maple Leaf Rag sample score provided, the terminal would look something like this:
+* * (use the --help flag to see help text)
+```python
+python markov_composer.py --help
 ```
-Please specify a path to the training piece, which should be a text file containing only space-separated chords. A chord is a comma-separated list of integer frequencies.
-> joplin/mapleleafrag.txt
-[training 0%] For chord(s) ('77,155',): updated probability of transition to 103,207 to 1.0000
-[training 0%] For chord(s) ('103,207',): updated probability of transition to 415 to 1.0000
-[training 0%] ...
-```
-The training piece will play while training, after which the generated piece will play.
 
 # Thanks
-The .txt scores for Joplin and Vivaldi compositions have been derived from CC-licensed MIDI files downloaded from [The Mutopia Project](https://www.mutopiaproject.org/ftp/).
+The .txt scores for Joplin and Vivaldi compositions have been derived from CC BY licensed MIDI files downloaded from [The Mutopia Project](https://www.mutopiaproject.org/ftp/).
