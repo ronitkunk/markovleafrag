@@ -1,5 +1,5 @@
 # Markov Chain Music Composer
-ELI5: will "learn" from the piece of music you give it, and play new music that hopefully captures some features of the genre.
+ELI5: will "learn" from the piece of music you give it, and create new music that hopefully captures some features of the genre.
 
 `create_markov_chain` will create a Markov chain whose states are chords in the piece of music you give it.
 It will learn the conditional distribution of the next chord given the current.
@@ -13,7 +13,7 @@ The value is a dict containing the **frequency** distribution of the next chord 
 * The values are the "learned" frequencies of the _next chord_ (inner key) conditional on the _previous chord_ (outer key).
 
 Video example:
-[![banner](banner.png)](https://youtu.be/k7kclpOR4y0?si=VBx-bcDd7odDHgAV)
+[![banner](banner.png)](https://youtu.be/e6alPSeGzyw?si=A7vuZcsqxZfOTMZT)
 
 # Usage
 * Clone this repository
@@ -31,7 +31,7 @@ pip install -r requirements.txt
 * * there are sample files provided like `joplin/mapleleafrag.txt` and `vivaldi/fourseasonsspring.txt`.
 * Run `markov_composer.py` with the correct command line arguments.
 ```python
-python markov_composer.py [--input_path INPUT_PATH] [--look_back LOOK_BACK] [--play] [--output_path OUTPUT_PATH] [--composition_length COMPOSITION_LENGTH]
+python markov_composer.py [--input_path INPUT_PATH] [--look_back LOOK_BACK] [--play] [--plot] [--output_path OUTPUT_PATH] [--composition_length COMPOSITION_LENGTH]
 ```
 * * (use the --help flag to see help text)
 ```python
