@@ -117,8 +117,7 @@ def compose_piece(markov_chain: dict, piece_length: int = 1000, save_path: str =
         # simulate the "approximate" (softmaxed) conditional distribution
         current_chord = random.choices(list(markov_chain[prev_state].keys()), weights=pmf)[0]
 
-        # print(f"[generating {((i+1)*100)//piece_length}%] Transition from", prev_state, "to", current_chord)
-        print(current_chord, end=" ")
+        print(f"[generating {((i+1)*100)//piece_length}%] Transition from", prev_state, "to", current_chord)
 
         chord = None
         if save or play:
