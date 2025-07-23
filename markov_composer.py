@@ -151,6 +151,6 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     
-    crappy_composer = fit_markov_chain(args.input_path, look_back=args.look_back, play=args.play, plot=args.plot)
+    crappy_composer = fit_markov_chain(args.input_path, look_back=args.look_back, play=args.play, plot=args.plot, temperature=args.temperature)
     compose_piece(crappy_composer, piece_length=args.composition_length, save_path=args.output_path, play=args.play, plot=args.plot, save=args.save, temperature=args.temperature)
 
